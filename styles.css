@@ -44,7 +44,7 @@ nav {
 }
 
 .menu li {
-    padding: 150px;
+    padding: 0;
 }
 
 .menu a {
@@ -148,7 +148,7 @@ form button:hover {
     flex-shrink: 0;
     display: grid;
     place-items: center;
-    box-shadow: 0 5px rgba(0, 0, 0, 005);
+    box-shadow: 0 5px rgba(0, 0, 0, 0.05);
 }
 .social a svg{
     height: 45px;
@@ -161,7 +161,7 @@ form button:hover {
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 100px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 005);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     transform: translateY(-30px) rotate(25deg);
     opacity: 0;
     transition: 200ms cubic-bezier(.42,0,.44,1.68);
@@ -198,6 +198,59 @@ form button:hover {
     opacity: 1;
 }
 
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .menu li {
+        padding: 15px;
+        .workout {
+            padding: 10px;
+        }
+        .program, .technique {
+            margin: 5px 0;
+            padding: 10px;
+            width: 100%; 
+        }
+        h1 {
+            font-size: 24px; 
+            margin: 10px 0; 
+        }
+        .program h2, .technique h2 {
+            font-size: 18px; 
+            margin: 5px 0; 
+        }
+        p {
+            margin: 5px 0; 
+            .social {
+                gap: 10px;
+                justify-content: center; 
+                flex-wrap: wrap; 
+            }
+            .social a {
+                width: 50px;
+                height: 50px;
+                padding: 0.5em;
+            }
+            .social a svg {
+                height: 30px;
+            }
+        }
+    }
+    }
+
 @media (min-width: 768px) { 
     nav {
         height: 70px;
@@ -213,6 +266,7 @@ form button:hover {
     }
     .menu li {
         margin: 0 15px;
+        padding: 0;
     }
     .header-img {
         max-height: 400px;
