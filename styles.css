@@ -213,43 +213,50 @@ form button:hover {
     height: 100%;
 }
 
+
 @media (max-width: 767px) {
     .menu li {
         padding: 15px;
-        .workout {
-            padding: 10px;
-        }
-        .program, .technique {
-            margin: 5px 0;
-            padding: 10px;
-            width: 100%; 
-        }
-        h1 {
-            font-size: 24px; 
-            margin: 10px 0; 
-        }
-        .program h2, .technique h2 {
-            font-size: 18px; 
-            margin: 5px 0; 
-        }
-        p {
-            margin: 5px 0; 
-            .social {
-                gap: 10px;
-                justify-content: center; 
-                flex-wrap: wrap; 
-            }
-            .social a {
-                width: 50px;
-                height: 50px;
-                padding: 0.5em;
-            }
-            .social a svg {
-                height: 30px;
-            }
-        }
     }
+}
+
+@media (max-width: 767) {
+    .workout {
+        padding: 10px;
     }
+    .program, .technique {
+        margin: 5px 0;
+        padding: 10px;
+        width: 100%;
+    }
+    h1 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .program h2, .technique h2 {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+    p {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .social {
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .social a {
+        width: 50px;
+        height: 50px;
+        padding: 0.5em;
+    }
+    .social a svg {
+        height: 30px;
+    }
+}
 
 @media (min-width: 768px) { 
     nav {
