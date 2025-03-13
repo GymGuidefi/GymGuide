@@ -44,7 +44,7 @@ nav {
 }
 
 .menu li {
-    padding: 150px;
+    padding: 0;
 }
 
 .menu a {
@@ -148,7 +148,7 @@ form button:hover {
     flex-shrink: 0;
     display: grid;
     place-items: center;
-    box-shadow: 0 5px rgba(0, 0, 0, 005);
+    box-shadow: 0 5px rgba(0, 0, 0, 0.05);
 }
 .social a svg{
     height: 45px;
@@ -161,7 +161,7 @@ form button:hover {
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 100px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 005);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     transform: translateY(-30px) rotate(25deg);
     opacity: 0;
     transition: 200ms cubic-bezier(.42,0,.44,1.68);
@@ -199,6 +199,13 @@ form button:hover {
 }
 
 
+
+@media (max-width: 767px) {
+    .menu li {
+        padding: 15px;
+    }
+}
+
 @media (min-width: 768px) { 
     nav {
         height: 70px;
@@ -214,6 +221,7 @@ form button:hover {
     }
     .menu li {
         margin: 0 15px;
+        padding: 0;
     }
     .header-img {
         max-height: 400px;
