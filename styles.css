@@ -198,6 +198,7 @@ form button:hover {
     opacity: 1;
 }
 
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -220,11 +221,22 @@ form button:hover {
     }
 }
 
-
 @media (min-width: 768px) {
+    .video-container {
+        width: 560px;
+        margin: 0 auto;
+    }
+
     .video-container iframe {
         width: 560px;
         height: 315px;
+        left: 0;
+    }
+
+    .program, .technique {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
