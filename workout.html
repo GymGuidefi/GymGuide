@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <button class="hamburger">☰</button>
+        <button class="hamburger" aria-label="Avaa valikko">☰</button>
         <ul class="menu">
             <li><a href="index.html">Etusivu</a></li>
             <li><a href="workout.html">Treeniopas</a></li>
@@ -17,42 +17,53 @@
             <li><a href="contact.html">Yhteystiedot</a></li>
         </ul>
     </nav>
-    <section class="workout">
-        <h1>Aloittelijan treeniohjelmat</h1>
-        <div class="program">
-            <h2>Ohjelma 1: Yläkroppa treeni</h2>
-            <p>
+    <main>
+        <section class="workout">
+            <h1>Aloittelijan treeniohjelmat</h1>
+            <p>Tässä osiossa esittelemme helppoja treeniohjelmia aloittelijoille. Katso videoita ja lue vinkit!</p>
+            <article class="program">
+                <h2>Ohjelma 1: Yläkroppa treeni</h2>
+                <p>Tämä treeni keskittyy hauikseen, ojentajaan, selkään ja rintaan. Tarvitset käsipainot tai oman kehon painon.</p>
+                <ul>
+                    <li>Chest Supported Row 2 x 6-8</li>
+                    <li>OverHead Press 2 x 6-8</li>
+                    <li>Overhead Tricep Extensions 2 x 6-8</li>
+                    <li>Käsipainon hauiskäännöt: 2 x 6-8</li>
+                    <li>Penkki käsipainoilla: 2 x 6-8</li>
+                </ul>
                 <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/acp77RhVzMM?si=p8iUL0h1svEzsVLI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/acp77RhVzMM?si=p8iUL0h1svEzsVLI" title="YouTube video player - Yläkroppa treeni" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-            </p>
-        </div>
-        <div class="program">
-            <h2>Ohjelma 2: Alakroppajako</h2>
-            <p>
+            </article>
+            <article class="program">
+                <h2>Ohjelma 2: Alakroppajako</h2>
+                <p>Alakroppatreeni vahvistaa jalkoja ja pakaroita. Sopii hyvin kuntosalille tai kotiin.</p>
+                <ul>
+                    <li>Kyykyt: 2 x 6-8</li>
+                    <li>Maastaveto: 2 x 6-8</li>
+                    <li>Askelkyykyt: 2 x 6-8 per jalka</li>
+                </ul>
                 <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/H6mRkx1x77k?si=7UH9Q8l9pbhChlUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/H6mRkx1x77k?si=7UH9Q8l9pbhChlUQ" title="YouTube video player - Alakroppajako" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-            </p>
-        </div>
-        <div class="technique">
-            <h2>Tekniikka</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/gcNh17Ckjgg?si=vD6t4yi9hpFP-0WA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-     <script>
+            </article>
+            <article class="technique">
+                <h2>Tekniikka</h2>
+                <p>Oikea tekniikka estää loukkaantumisia. Katso vinkit videolta!</p>
+                <div class="video-container">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/gcNh17Ckjgg?si=vD6t4yi9hpFP-0WA" title="YouTube video player - Tekniikka" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script>
         const hamburger = document.querySelector('.hamburger');
         const menu = document.querySelector('.menu');
-
         if (hamburger && menu) {
             hamburger.addEventListener('click', () => {
                 menu.classList.toggle('active');
-                console.log('Valikko avattu/suljettu');
+                hamburger.textContent = menu.classList.contains('active') ? '✕' : '☰';
             });
-        } else {
-            console.error('Hampurilaista tai valikkoa ei löydy!');
         }
     </script>
 </body>

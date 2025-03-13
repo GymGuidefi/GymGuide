@@ -198,6 +198,10 @@ form button:hover {
     opacity: 1;
 }
 
+a:focus, button:focus {
+    outline: 2px solid #FF6B00;
+    outline-offset: 2px;
+}
 
 .video-container {
     position: relative;
