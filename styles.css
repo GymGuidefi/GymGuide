@@ -199,7 +199,6 @@ form button:hover {
 }
 
 
-
 @media (max-width: 767px) {
     .menu li {
         padding: 15px;
@@ -246,5 +245,20 @@ form button:hover {
     }
     .program, .technique, .nutrient, .meal, form {
         width: 45%;
+    }
+
+    @media (max-width: 767px) {
+        .social {
+            gap: 10px;
+            justify-content: center;
+        }
+        .social a {
+            width: 50px;
+            height: 50px;
+            padding: 0.5em;
+        }
+        .social a svg {
+            height: 30px;
+        }
     }
 }
